@@ -60,7 +60,7 @@ namespace stm32plus {
       protected:
         Parameters _params;
         uint16_t _serverCount;
-        std::slist<TcpClosingConnectionState> _closingConnections;
+        __gnu_cxx::slist<TcpClosingConnectionState> _closingConnections;
 
       protected:
         void onNotification(NetEventDescriptor& ned);
@@ -190,7 +190,7 @@ namespace stm32plus {
 
       // check if this segment is for one of the closing connections
 
-      std::slist<TcpClosingConnectionState>::iterator it,previt;
+      __gnu_cxx::slist<TcpClosingConnectionState>::iterator it,previt;
       bool notfound;
 
       {
@@ -338,7 +338,7 @@ namespace stm32plus {
     template<class TNetworkLayer>
     inline void Tcp<TNetworkLayer>::onTick(NetworkIntervalTickData& nitd) {
 
-      std::slist<TcpClosingConnectionState>::iterator previt,it;
+      __gnu_cxx::slist<TcpClosingConnectionState>::iterator previt,it;
 
       // iterate the closing connections
 
@@ -412,7 +412,7 @@ namespace stm32plus {
 
       // add to the list (struct copy)
 
-      std::slist<TcpClosingConnectionState>::iterator it;
+      __gnu_cxx::slist<TcpClosingConnectionState>::iterator it;
 
       {
         IrqSuspend suspender;
@@ -774,4 +774,3 @@ namespace stm32plus {
     }
   }
 }
-

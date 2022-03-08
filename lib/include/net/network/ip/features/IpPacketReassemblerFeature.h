@@ -56,7 +56,7 @@ namespace stm32plus {
 
       private:
         Parameters _params;
-        std::slist<IpFragmentedPacket *> _frags;
+        __gnu_cxx::slist<IpFragmentedPacket *> _frags;
         uint32_t _totalFragmentSize;
         uint32_t _inFlightPacketCount;
         NetworkUtilityObjects *_utilityObjects;

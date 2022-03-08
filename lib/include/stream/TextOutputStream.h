@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "string/StringUtil.h"
 
 namespace stm32plus {
 
@@ -205,4 +206,3 @@ namespace stm32plus {
     return _stream.flush();
   }
 }
-

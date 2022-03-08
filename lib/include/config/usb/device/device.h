@@ -16,7 +16,6 @@
   #include "config/event.h"
   #include "config/nvic.h"
   #include "util/BitHacks.h"
-  #include "util/StdExt.h"
 
   // core includes
 
@@ -64,7 +63,6 @@
   #include "config/rcc.h"
   #include "config/exti.h"
   #include "util/Meta.h"
-  #include "util/StdExt.h"
 
   #include "usb/f4/device/HalUsbdStatus.h"
 
@@ -139,4 +137,3 @@
   #include "usb/f4/device/features/InterfaceTextFeature.h"
 
 #endif
-

@@ -167,10 +167,20 @@ env.Replace(CCFLAGS=[
     "-fno-exceptions",
     "-mthumb",
     "-gdwarf-2",
-    "-pipe"
+    "-pipe",
+    "-Wno-attributes"
 ])
-env.Replace(CXXFLAGS=["-Wextra", "-pedantic-errors",
-            "-fno-rtti", "-std=gnu++14", "-fno-threadsafe-statics"])
+env.Replace(CXXFLAGS=[
+    "-Wextra",
+    "-pedantic-errors",
+    "-fno-rtti",
+    "-std=gnu++14",
+    "-fno-threadsafe-statics",
+    "-Wno-deprecated-copy",
+    "-Wno-cast-function-type",
+    "-Wno-address-of-packed-member",
+    "-Wno-class-memaccess"
+])
 env.Append(CPPDEFINES=[(osc_def, osc)])
 global_env.Append(CPPDEFINES=[(osc_def, osc)])
 env.Append(LINKFLAGS=["-Xlinker", "--gc-sections",

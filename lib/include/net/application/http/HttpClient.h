@@ -28,14 +28,14 @@ namespace stm32plus {
       protected:
         TcpConnection& _conn;                       ///< reference to the TCP connection
 
-        std::slist<std::string> _requestHeaders;    ///< headers to set on the request
+        __gnu_cxx::slist<std::string> _requestHeaders;    ///< headers to set on the request
         HttpVersion _httpVersion;                   ///< protocol version, default is 1.1
         HttpMethod _httpMethod;                     ///< method, default is GET
         std::string _uri;                           ///< URI for the request (no host and no protocol)
         std::string _host;                          ///< the Host: header value (mandatory for HTTP/1.1)
 
         uint16_t _maxResponseHeaderLineLength;      ///< maximum length of a response header line before we truncate it. default is 100.
-        std::slist<std::string> _responseHeaders;   ///< response header list
+        __gnu_cxx::slist<std::string> _responseHeaders;   ///< response header list
         uint16_t _responseCode;                     ///< HTTP response code number
         int32_t _responseContentLength;             ///< content length of response, or -1 if server not sent
         std::string _responseContentType;           ///< response content type, or empty if server not sent
@@ -56,7 +56,7 @@ namespace stm32plus {
         uint16_t getResponseCode() const;
         int32_t getResponseContentLength() const;
         const std::string& getResponseContentType() const;
-        const std::slist<std::string>& getResponseHeaders() const;
+        const __gnu_cxx::slist<std::string>& getResponseHeaders() const;
     };
 
 
@@ -335,7 +335,7 @@ namespace stm32plus {
      * @return The last response headers
      */
 
-    inline const std::slist<std::string>& HttpClient::getResponseHeaders() const {
+    inline const __gnu_cxx::slist<std::string>& HttpClient::getResponseHeaders() const {
       return _responseHeaders;
     }
 

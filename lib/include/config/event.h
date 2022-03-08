@@ -14,14 +14,7 @@
  * class that raises them.
  */
 
-// event depends on stl slist
-// some implementation contain slist in ext/slist
-#include "iterator"
-#ifdef EXT_SLIST
-    #include "ext/slist"
-#else
-    #include "slist"
-#endif
+#include "ext/slist"
 
 // include the event/slot signal classes
 
