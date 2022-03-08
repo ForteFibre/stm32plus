@@ -1,0 +1,26 @@
+{
+    "name": "stm32plus",
+    "version": "4.0.7-pio",
+    "description": "stm32plus by andysworkshop, modified by ForteFibre",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ForteFibre/stm32plus.git"
+    },
+    "homepage": "https://andybrown.me.uk/",
+    "frameworks": "*",
+    "platforms": [
+        "ststm32"
+    ],
+    "build": {
+        "includeDir": "lib/include",
+        "srcDir": "lib/",
+        "srcFilter": [
+            "+<src/>",
+            "+<fwlib/f4>",
+            "+<usblib/>",
+            "-<include/>"
+        ],
+        "libArchive": true,
+        "extraScript": "scripts/build.py"
+    }
+}
