@@ -186,6 +186,8 @@ global_env.Append(CPPDEFINES=[(osc_def, osc)])
 env.Append(LINKFLAGS=["-Xlinker", "--gc-sections",
            "-mthumb", "-g3", "-gdwarf-2"])
 
+env.Replace(AS="$CC", ASCOM="$ASPPCOM")
+
 # add on the MCU-specific definitions
 
 if mcu.startswith("stm32f407") or mcu.startswith("stm32f405"):
