@@ -72,9 +72,10 @@ Usage: scons mode=<MODE> mcu=<MCU> (hse=<HSE> / hsi=<HSI>) [float=hard] [example
 from os.path import realpath
 
 Import('env')
+Import('projenv')
 
 board = env.BoardConfig()
-global_env = DefaultEnvironment()
+global_env = projenv
 #
 # set CCFLAGS/ASFLAGS/LINKFLAGS
 #
